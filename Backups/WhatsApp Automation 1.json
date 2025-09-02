@@ -1,0 +1,167 @@
+{
+  "name": "WhatsApp Automation 1",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "094c4653-8853-4a7a-8e6d-8ccd939904d0",
+      "name": "WhatsApp Trigger",
+      "webhookId": "95e2fcd7-df39-4629-bd56-79d24dad8802",
+      "credentials": {
+        "whatsAppTriggerApi": {
+          "id": "Cw6Plb1Wtc8Ij6ce",
+          "name": "WhatsApp OAuth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.messages[0].text.body }}",
+        "options": {
+          "systemMessage": "=You are a helpful assistant named Mike.\n\nRespond in a humorously sarcastic tone.\n\nYou are talking with {{ $json.contacts[0].profile.name }}.\n\nStart every message with a greeting, by naming the person that you are talking to, and saying either \"Good day (persons name)\" if the time is between 5:00 AM to 5:00 PM, or \"Good night (persons name)\" otherwise.\n\nThe current date and time is {{ $now.toISO() }}."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "e1570d34-0d56-4c06-a06b-561734582049",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        160,
+        272
+      ],
+      "id": "49c1c7f0-86b4-4d1d-b06b-3f8987498ba9",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "OxtvobBAR9G43ivb",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.contacts[0].wa_id }}",
+        "contextWindowLength": 50
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        320,
+        272
+      ],
+      "id": "48bf7563-8724-4b82-8950-4f8fb2356392",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "745233098672702",
+        "recipientPhoneNumber": "={{ $('WhatsApp Trigger').item.json.messages[0].from }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        592,
+        0
+      ],
+      "id": "8572b9c3-220e-4ae9-b033-c795fea2ac7d",
+      "name": "Send message",
+      "webhookId": "42ffdb34-069a-4dfd-9328-74fbcd9c0469",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "7exelF8r3IygrB1m",
+          "name": "WhatsApp Tutorial"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f0ed7f51-0926-41ec-81c8-1e6ccf58fb45",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d800a0f8b19b40b6ef15ffe7840d0d1a54424f3d2369d4900290fec757994e92"
+  },
+  "id": "oq5kotDO9G5XoAH5",
+  "tags": []
+}

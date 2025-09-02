@@ -1,0 +1,286 @@
+{
+  "name": "Practice Project 2",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f7d83eff-35b6-4632-901b-35d266424ba3",
+              "leftValue": "={{ $json.Name.startsWith(\"N\") }}",
+              "rightValue": "={{true}}",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        48
+      ],
+      "id": "33ec28c5-9a89-46e5-a45c-da9a0b898c40",
+      "name": "If name starts with \"N\""
+    },
+    {
+      "parameters": {
+        "formTitle": "Support Form",
+        "formDescription": "Our support form",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Name",
+              "placeholder": "Your name",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        48
+      ],
+      "id": "f059c8ff-46e4-4fba-8877-479359236cf8",
+      "name": "Request support form",
+      "webhookId": "8dc92913-3556-47f3-8736-8e91e68f671c"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1tKNblHnPcrXkPVGS1yOuk01dwyeGd1yuV2Rs9LUoBbU",
+          "mode": "list",
+          "cachedResultName": "Example Document",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tKNblHnPcrXkPVGS1yOuk01dwyeGd1yuV2Rs9LUoBbU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tKNblHnPcrXkPVGS1yOuk01dwyeGd1yuV2Rs9LUoBbU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.Name }}",
+            "Execution ID": "={{ $execution.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Execution ID",
+              "displayName": "Execution ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        448,
+        -48
+      ],
+      "id": "376042aa-7299-489d-b1b5-4799edf8a893",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "SST11VtZt4EcinLt",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        736,
+        -48
+      ],
+      "id": "5e864f31-9268-41a5-9b65-bf450e03478a",
+      "name": "End of flow 1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1088,
+        176
+      ],
+      "id": "a530d9a5-e926-4e91-a8a7-36ac2b9d66cf",
+      "name": "End of flow 2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Write a short, rhyming poem about the user's name, which is {{ $json.Name }}.",
+        "options": {
+          "systemMessage": "=You are a flamboyant poet."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        656,
+        176
+      ],
+      "id": "fde32442-3d86-49ae-9c08-042a2c024f1a",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        576,
+        448
+      ],
+      "id": "295da876-f51b-4983-92b9-b17022b7f31a",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "OxtvobBAR9G43ivb",
+          "name": "n8n free OpenAI API credits"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Request support form": [
+      {
+        "json": {
+          "Name": "Donatello",
+          "submittedAt": "2025-08-13T17:44:16.226+03:00",
+          "formMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Request support form": {
+      "main": [
+        [
+          {
+            "node": "If name starts with \"N\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If name starts with \"N\"": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "End of flow 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "End of flow 2": {
+      "main": [
+        []
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "End of flow 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bcbc44bd-e1d0-4fd6-88ed-d4d1d2d44a8c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d800a0f8b19b40b6ef15ffe7840d0d1a54424f3d2369d4900290fec757994e92"
+  },
+  "id": "CTDvb8Pr1kjPgpU5",
+  "tags": []
+}
