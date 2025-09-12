@@ -13,3 +13,6 @@
 - Portfolio URL: <https://mayandigital.app.n8n.cloud/>
 
 - Workflow templated: <https://n8n.io/workflows>
+
+- (check more WhatsApp "example workflows" - this is the most common client
+  request. Maybe even create an entire "WhatsApp workflows" portfolio)
