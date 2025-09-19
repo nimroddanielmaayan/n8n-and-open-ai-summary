@@ -192,17 +192,6 @@
       }
     }
   ],
-  "pinData": {
-    "Request support form": [
-      {
-        "json": {
-          "Name": "Donatello",
-          "submittedAt": "2025-08-13T17:44:16.226+03:00",
-          "formMode": "production"
-        }
-      }
-    ]
-  },
   "connections": {
     "Request support form": {
       "main": [
@@ -272,15 +261,23 @@
       ]
     }
   },
-  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "bcbc44bd-e1d0-4fd6-88ed-d4d1d2d44a8c",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "d800a0f8b19b40b6ef15ffe7840d0d1a54424f3d2369d4900290fec757994e92"
+  "staticData": null,
+  "pinData": {
+    "Request support form": [
+      {
+        "json": {
+          "Name": "Donatello",
+          "submittedAt": "2025-08-13T17:44:16.226+03:00",
+          "formMode": "production"
+        }
+      }
+    ]
   },
-  "id": "CTDvb8Pr1kjPgpU5",
-  "tags": []
+  "triggerCount": 1,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  }
 }

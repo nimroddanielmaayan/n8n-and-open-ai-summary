@@ -106,7 +106,6 @@
       }
     }
   ],
-  "pinData": {},
   "connections": {
     "WhatsApp Trigger": {
       "main": [
@@ -153,15 +152,13 @@
       ]
     }
   },
-  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "f0ed7f51-0926-41ec-81c8-1e6ccf58fb45",
+  "staticData": null,
+  "pinData": {},
+  "triggerCount": 2,
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "d800a0f8b19b40b6ef15ffe7840d0d1a54424f3d2369d4900290fec757994e92"
-  },
-  "id": "oq5kotDO9G5XoAH5",
-  "tags": []
+    "templateCredsSetupCompleted": true
+  }
 }

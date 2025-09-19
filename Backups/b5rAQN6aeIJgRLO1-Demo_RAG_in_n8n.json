@@ -1,5 +1,5 @@
 {
-  "name": "Demo: RAG in n8n V2",
+  "name": "Demo: RAG in n8n",
   "nodes": [
     {
       "parameters": {
@@ -214,7 +214,6 @@
       "name": "Sticky Note3"
     }
   ],
-  "pinData": {},
   "connections": {
     "Upload your file here": {
       "main": [
@@ -288,15 +287,13 @@
       ]
     }
   },
-  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "10cc3fce-a646-407f-a95a-0f1795f4e849",
+  "staticData": null,
+  "pinData": {},
+  "triggerCount": 0,
   "meta": {
-    "templateId": "rag-starter-template",
-    "instanceId": "d800a0f8b19b40b6ef15ffe7840d0d1a54424f3d2369d4900290fec757994e92"
-  },
-  "id": "TNiMd6PpiQtcqyk0",
-  "tags": []
+    "templateId": "rag-starter-template"
+  }
 }
