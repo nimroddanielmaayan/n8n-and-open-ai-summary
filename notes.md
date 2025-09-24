@@ -10,27 +10,28 @@
 
 - Therefore, speed is of the essence
 
-- Portfolio URL: <https://mayandigital.app.n8n.cloud/>
+- My n8n platform URL: <https://mayandigital.app.n8n.cloud/>
 
-- Workflow templated: <https://n8n.io/workflows>
+- Workflow templates: <https://n8n.io/workflows>
 
 - (check more WhatsApp "example workflows" - this is the most common client
   request. Maybe even create an entire "WhatsApp workflows" portfolio)
 
-- ...
+- Currently, it looks like there's no way to link to a "public portfolio" or to
+  individual workflows. The only way to show the portfolio to potential clients
+  is using screen share or video capture
 
-- ...
+## n8n Basics
 
-- ...
+### Keeping Things Organized
 
-- ...
+- In order to keep things organized, it might be a good idea to name projects
+  like this: "Client Name: Project Name"
 
-- ...
+- Internal projects (like my portfolio) should have a client name of "Internal"
 
-- ...
+## WhatsApp Chatbots
 
-- ...
-
-- ...
+### General Information
 
 - ...
