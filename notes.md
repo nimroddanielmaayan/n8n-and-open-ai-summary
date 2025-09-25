@@ -2,7 +2,7 @@
 
 ## General
 
-### General Information
+### General Information - n8n and Automations
 
 - n8n might be a "gold rush" for a while. So it's something that can make a lof
   of money in the short term, but will become very common and "comoditized" in
@@ -32,6 +32,8 @@
 
 ## WhatsApp Chatbots
 
-### General Information
+### General Information - WhatsApp Chatbots
+
+- ...
 
 - ...
