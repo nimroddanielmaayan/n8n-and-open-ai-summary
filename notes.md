@@ -4,6 +4,10 @@
 
 ### General Information - n8n and Automations
 
+- I am currently here on this tutorial:
+  <https://youtu.be/u7ktVHkd8DI?si=LBkAC3syAxWrQhSZ&t=793>, I already set up
+  payments to OpenAI
+
 - n8n might be a "gold rush" for a while. So it's something that can make a lof
   of money in the short term, but will become very common and "comoditized" in
   the long run
