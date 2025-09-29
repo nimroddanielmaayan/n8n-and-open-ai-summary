@@ -17,6 +17,9 @@
   (like send an email), and when it needs to run them, in its system
   instructions
 
+- n8n recently added a "Data Table" node, which is like Google Sheets, but
+  native
+
 - The next thing that I have to do for "Nimrod Bot" is to write a PDF with
   questions and answers, to upload to the OpenAI Platform
 
