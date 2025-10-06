@@ -46,6 +46,21 @@
 
 - n8n is short for "nodemation", which basically means "automation using nodes"
 
+### Types of Projects that I've Done
+
+- WhatsApp chatbot
+- Web chatbot
+- RAG
+- Google Calendar integration
+- Google Sheets integration
+- Local n8n database integration
+- Leads aggregation and qualification (to be completed)
+
+I need to go over these tutorials ASAP:
+
+- <https://www.youtube.com/watch?v=fWtXJswvUcA>
+- <https://www.youtube.com/watch?v=pMIiZfqfbCo>
+
 ## n8n Basics
 
 ### Keeping Things Organized
@@ -90,21 +105,3 @@
 - Always test before shipping to production!
 
 - n8n has nice testing tools
-
-- ...
-
-- ...
-
-- ...
-
-- ...
-
-- ...
-
-- ...
-
-- ...
-
-- ...
-
-- ...
