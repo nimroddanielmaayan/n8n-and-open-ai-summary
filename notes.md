@@ -56,6 +56,8 @@
 - Local n8n database integration
 - Leads aggregation and qualification (to be completed)
 
+(I need to do projects that end up in impressive demos)
+
 I need to go over these tutorials ASAP:
 
 - <https://www.youtube.com/watch?v=fWtXJswvUcA>
