@@ -61,6 +61,13 @@ I need to go over these tutorials ASAP:
 - <https://www.youtube.com/watch?v=fWtXJswvUcA>
 - <https://www.youtube.com/watch?v=pMIiZfqfbCo>
 
+Official n8n tutorials:
+
+- <https://docs.n8n.io/try-it-out/quickstart/>
+- <https://docs.n8n.io/try-it-out/tutorial-first-workflow/>
+- <https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI>
+- <https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG>
+
 ## n8n Basics
 
 ### Keeping Things Organized
