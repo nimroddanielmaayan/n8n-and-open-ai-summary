@@ -55,12 +55,15 @@
 - Google Sheets integration
 - Local n8n database integration
 - Leads aggregation and qualification (to be completed)
-- ...
+- (more to come)
 
 (I need to do projects that end up in impressive demos)
 
-I need to go over these tutorials ASAP:
+Go over these tutorials\videos:
 
+- <https://www.youtube.com/watch?v=GVBjKEWHiF8>
+- <https://www.youtube.com/watch?v=aB2h3SzCZwc>
+- <https://www.youtube.com/watch?v=PT6payqqvuk>
 - <https://www.youtube.com/watch?v=fWtXJswvUcA>
 - <https://www.youtube.com/watch?v=pMIiZfqfbCo>
 
