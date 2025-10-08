@@ -48,13 +48,14 @@
 
 ### Types of Projects that I've Done
 
-- WhatsApp chatbot
-- Web chatbot
+- WhatsApp\web chatbot
 - RAG
 - Google Calendar integration
+- Google Mail integration
 - Google Sheets integration
 - Local n8n database integration
 - Leads aggregation and qualification (to be completed)
+- ...
 
 (I need to do projects that end up in impressive demos)
 
