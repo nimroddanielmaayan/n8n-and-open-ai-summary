@@ -86,6 +86,10 @@ Official n8n tutorials (complete theses first):
 - The "define using AI" option is useful, when the information that needs to be
   passed between nodes is dynamic and not known in advance
 
+### Official n8n Tutorials
+
+- (summarize here)
+
 ## WhatsApp Chatbots
 
 ### General Information - WhatsApp Chatbots
