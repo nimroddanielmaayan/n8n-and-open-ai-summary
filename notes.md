@@ -67,7 +67,7 @@ Go over these tutorials\videos:
 - <https://www.youtube.com/watch?v=fWtXJswvUcA>
 - <https://www.youtube.com/watch?v=pMIiZfqfbCo>
 
-Official n8n tutorials:
+Official n8n tutorials (complete theses first):
 
 - <https://docs.n8n.io/try-it-out/quickstart/>
 - <https://docs.n8n.io/try-it-out/tutorial-first-workflow/>
