@@ -2,7 +2,7 @@
 
 ## General
 
-### General Information - n8n and Automations
+### General Information - Automations and n8n
 
 - I am currently working on this tutorial: <https://youtu.be/u7ktVHkd8DI>, I
   already set up payments to OpenAI
@@ -46,7 +46,7 @@
 
 - n8n is short for "nodemation", which basically means "automation using nodes"
 
-### Types of Projects that I've Done
+### My Progress - Types of Projects that I've Done
 
 - WhatsApp\web chatbot
 - RAG
@@ -59,7 +59,9 @@
 
 (I need to do projects that end up in impressive demos)
 
-Go over these tutorials\videos:
+### My Progress - Tutorials
+
+To do - tutorials\videos:
 
 - <https://www.youtube.com/watch?v=GVBjKEWHiF8>
 - <https://www.youtube.com/watch?v=aB2h3SzCZwc>
@@ -67,12 +69,21 @@ Go over these tutorials\videos:
 - <https://www.youtube.com/watch?v=fWtXJswvUcA>
 - <https://www.youtube.com/watch?v=pMIiZfqfbCo>
 
-Official n8n tutorials (complete theses first):
+## Official n8n Tutorials - Summary
+
+### All official n8n tutorials
 
 - <https://docs.n8n.io/try-it-out/quickstart/>
+
 - <https://docs.n8n.io/try-it-out/tutorial-first-workflow/>
+
 - <https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI>
+
 - <https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG>
+
+### Subject #1
+
+- ...
 
 ## n8n Basics
 
@@ -86,43 +97,29 @@ Official n8n tutorials (complete theses first):
 - The "define using AI" option is useful, when the information that needs to be
   passed between nodes is dynamic and not known in advance
 
-### Official n8n Tutorials - Quick Summary
-
-- (summarize here)
-
-- ...
-
-- ...
-
-## WhatsApp Chatbots
-
-### General Information - WhatsApp Chatbots
-
-- ...
-
-### The OpenAI Platform
-
-- ...
-
-## Tool Calling
-
-### Tool Calling Basics
+### Tool Calling
 
 - Code tools - these can be used, for example, to remove annotations from a PDF
   response, and so on
 
-## Assistants
-
-### Assistants Basics
+### Assistants
 
 - Remember - assistants need to be notified about the tools that they can run,
   and when they need to run them. This is done in the assistant's system
   instructions
 
-## Testing
-
-### Testing Basics
+### Testing
 
 - Always test before shipping to production!
 
 - n8n has nice testing tools
+
+## Chatbots\WhatsApp Chatbots
+
+### General Information - WhatsApp Chatbots
+
+- ...
+
+### The OpenAI Platform - Chatbots, Assistants, Agents and More
+
+- ...
