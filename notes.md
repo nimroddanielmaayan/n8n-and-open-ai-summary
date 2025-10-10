@@ -46,6 +46,11 @@
 
 - n8n is short for "nodemation", which basically means "automation using nodes"
 
+- The way to get good business results is to solve a meaningful business problem
+  in a good way, and then repeat the process in a wahy that's as automatic as
+  possible. Eventually, it's possible to even develop a software (SASS) that can
+  solve this problem
+
 ### My Progress - Types of Projects that I've Done
 
 - WhatsApp\web chatbot
@@ -63,6 +68,11 @@
 
 To do - tutorials\videos:
 
+- Practice: Webhooks\Builfing an API server (and test using Postman), error flow
+  (and implement in my portfolio), save to GitHub flow (it's in the existing
+  templates)
+- <https://docs.n8n.io/try-it-out/quickstart/>
+- <https://docs.n8n.io/try-it-out/tutorial-first-workflow/>
 - <https://www.youtube.com/watch?v=GVBjKEWHiF8>
 - <https://www.youtube.com/watch?v=aB2h3SzCZwc>
 - <https://www.youtube.com/watch?v=PT6payqqvuk>
@@ -71,17 +81,175 @@ To do - tutorials\videos:
 
 ## Official n8n Tutorials - Summary
 
-### All official n8n tutorials
-
-- <https://docs.n8n.io/try-it-out/quickstart/>
-
-- <https://docs.n8n.io/try-it-out/tutorial-first-workflow/>
+### Official n8n Video Tutorials
 
 - <https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI>
 
 - <https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG>
 
-### Subject #1
+### Tutorial Subject 1 - Basics
+
+- When there's an error, "copy to editor" becomes "debug in editor", and then we
+  can retry. Using "edit output" for debugging is also a good technique
+
+- At the end of a work day, it's recommended to save the workflows locally, or
+  to use a GitHub automation
+
+- Every input and output are built of a list of JSONs, also called "items"
+
+- Not every flow failure will result in an error (for example - an empty reply).
+  That's what the "throw error" node shoud be used for
+
+- It's important to add contact details to an error flow, at least an email
+
+- In the n8n community forum, it's possible to request help from the company's
+  support
+
+- It's always good practice to search for existing templates, before trying to
+  build something from zero
+
+- User types: Owner, admin, member
+
+- Sharing credentials between projects can be done without exposing the actual
+  credentials
+
+- Then n8n API is used for several use cases, like managing workflows using
+  external software
+
+- The most common\useful nodes:
+
+  - Chat Trigger
+  - n8n Form Trigger
+  - Manual Trigger
+  - Schedule Trigger
+  - Error Trigger
+  - Filter
+  - HTTP Request
+  - Webhook
+  - Respond to Webhook
+  - Edit Fields
+  - If
+  - Switch
+  - Loop
+  - Execute Sub-Workflow
+  - Call n8n Workflow Tool
+  - n8n
+  - Code
+  - Split Out
+  - Aggregate
+  - Merge
+  - Summarize
+  - Stop and Error
+  - Wait
+  - Data Table
+  - No Operation
+
+- Actions\Apps: Allow us to interact with 3rd party applications
+
+- Mapping: The first step to any good automation! Mapping can be done with any
+  graphic software, or even on paper. There's no need to plan which nodes to use
+  at this point, just the general logical flow of the process. Maping
+
+  1. Fully understanding the task
+  2. Tools that will be used
+  3. Feasibility\reliability of the automation
+  4. Estimation of the workload the automation will handle
+  5. Points of human intervention (sometimes)
+
+### Tutorial Subject 2 - Advanced Concepts
+
+- It's common practice to write JSON names with lowercase letters and an
+  underscore, like: first_name, last_name, etc
+
+- Nodes are activated from top to bottom, and then from left to right. There
+  must always be a logical order to when things happen
+
+- It's possible to take an output from one node to several node branches. In
+  this case, the output is copied in full
+
+- Sometimes a node should only be executed once - in which case, it has to be
+  marked to execute once
+
+- The merge node is the only one that requires 2 inputs. It can
+  combine\append\choose. There are several possible ways to match data, like in
+  SQL
+
+- The loop node is useful if there's an API limitation, or any other data size
+  limitation
+
+- The node's "output runs": Here, it's possible to scroll through the outputs of
+  the different items
+
+### Tutorial Subject 3 - Code and APIs
+
+- In the n8n docs, there's a list of all the built-in functionalities that can
+  be used in nodes. These functionalities are indicated by a $ sign
+
+- The Code Node: It's important to remember that it must always retern either a
+  list of JSONs or a single JSON. At the minimum, it must return empty data. The
+  Code Node can actually replace many of the other nodes, but it's best practice
+  to use thr more basic nodes when possible, for clarity and simplicity
+
+- Webhook Node: Webhooks are like a "doorbell" that indicates that a "package
+  has arrived". It can also be thought of as an "API server" node
+
+- HTTP Request Node: This node is like "Postman in a node". It allows the flow
+  to call a REST API. IT has several built-in options like pagination (multiple
+  requests), authentication, etc
+
+- We can import a curl command into an HTTP Request Node. curl is a command line
+  tool for making HTTP requests manually. Many times, an APIs documentation will
+  provide the curl version of commands, and that can save us time
+
+- In a code node, it's possible to do a console.log and then to use the browser
+  console to see the output
+
+### Tutorial Subject 4 - Best Practices
+
+- It's recommended to use pinning as much as possible, in order to save time.
+  Oinning should be done at the stage at which we already finished working on,
+  and so the pin should "advance" along the workflow with time
+
+- Once pinning is used, the flow can be cativated step-by-step or all at once,
+  using the pinned data
+
+- Edit output: Is useful for edge cases, such as taking data and changing a
+  specific value to "null", in order to simulate such a case
+
+- Data can be copied from one execution to another. This can be useful if an
+  execution failed and we want to debug it
+
+- We can use mockaroo.com to create mock JSON data
+
+- Another good practice is to create a Manual Trigger Node with mock data. It
+  can be deleted once the flow is done
+
+- Sub Workflows: This is how we can do modulization and reusability. Every Sub
+  Workflow starts with an Execute Workflow node and should end with a No
+  Operation node. And then, its final data is transfered to the next node after
+  it (in the parent workflow)
+
+- It's good practice to end every workflow with a No Operation node, and to call
+  it "End of flow"
+
+- Sticky notes can be used to document a workflow
+
+- The idea of a "workflow owner": This refers not to authority, but to tagging
+  the person who is responsible for the workflow (either on of our team members
+  or one of the client's team members)
+
+### Tutorial Subject 5 - Errors and Error Handling
+
+- It's good practice to "categorize" errors, like 500 errors (server errors,
+  usually not our fault), 400 errors (client errors, usually our fault), etc.
+  This is done using code. It's also good practice to manage different error
+  types differently, like sending them to the appropriate prople
+
+### Tutorial Subject 6 - Working with Files
+
+- ...
+
+### Tutorial Subject 7 - Enterprise Features
 
 - ...
 
