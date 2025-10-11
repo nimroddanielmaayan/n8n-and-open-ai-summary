@@ -1,4 +1,4 @@
-# n8n Summary
+# n8n and OpenAI PlatformSummary
 
 ## General
 
@@ -142,6 +142,7 @@ To do - tutorials\videos:
   - Stop and Error
   - Wait
   - Data Table
+  - Execution Data
   - No Operation
 
 - Actions\Apps: Allow us to interact with 3rd party applications
@@ -238,6 +239,25 @@ To do - tutorials\videos:
   the person who is responsible for the workflow (either on of our team members
   or one of the client's team members)
 
+- In order to "inject" a non-changing JSON with non-changing data, it's possible
+  to use the Code node with this command:
+
+```javascript
+return [
+  {
+    // JSON data...
+  }
+];
+```
+
+This node will always return the same JSON data, no matter what its input is. On
+the other hand, this node does "care" when it's being activated and where it's
+sending its output to, and so it does need to have both an input node and an
+output node
+
+- It's recommended when working with an external API, to always check if the
+  status code is not 200, and to use an Error node if that's true
+
 ### Tutorial Subject 5 - Errors and Error Handling
 
 - It's good practice to "categorize" errors, like 500 errors (server errors,
@@ -245,13 +265,37 @@ To do - tutorials\videos:
   This is done using code. It's also good practice to manage different error
   types differently, like sending them to the appropriate prople
 
+- It's possible to create an "advanced error workflow", to use the n8n node in
+  order to reciever the tag of whoever's responsible for the workflow that's
+  erroring, and and in that way "standardize" the error handling process
+
 ### Tutorial Subject 6 - Working with Files
 
-- ...
+- When working with files, we'll have the "binary" option available in the
+  output section of the node, alongside JSON\schema\table. From there, we can
+  preview or download the file
+
+- n8n has specific nodes for working with files, like the Zip\Unzip nodes
+
+- Several files that are returned form a node can be considered as one item. In
+  this case, it's possible to use a Code node to split these into separate
+  output items
 
 ### Tutorial Subject 7 - Enterprise Features
 
-- ...
+- The enterprise plan allows us to create a custom log of the executions data.
+  This data can be collected using the Execution Data node. This can also be a
+  good way of sharing the execution data with the client, without having to give
+  access the editor dashboard
+
+- Git versioning is only available in the enterprise plan. But, saving to git is
+  possible either manually or using a workflow
+
+- Variables: Allow managing data in a more efficient way
+
+- External Secrets: For using with external key-keeping services
+
+- SSO\LDAP\Log Streaming: More relevant for large businesses\agencies
 
 ## n8n Basics
 
@@ -286,8 +330,8 @@ To do - tutorials\videos:
 
 ### General Information - WhatsApp Chatbots
 
-- ...
+- (complete this)
 
-### The OpenAI Platform - Chatbots, Assistants, Agents and More
+## The OpenAI Platform - Chatbots, Assistants, Agents, Agent Builder, Agent Kit and More
 
-- ...
+- (complete this)
