@@ -332,6 +332,12 @@ output node
 
 - (complete this)
 
+## n8n Self Hosting (on Hostinger)
+
+### General Information - n8n Self Hosting
+
+- ...
+
 ## The OpenAI Platform - Chatbots, Assistants, Agents, Agent Builder, Agent Kit and More
 
 - (complete this)
