@@ -334,9 +334,13 @@ output node
 
 ## n8n Self Hosting (on Hostinger)
 
-### General Information - n8n Self Hosting
+### License - n8n Self Hosting
 
-- ...
+- The n8n "free self hosting license" allows for personal, hobby, or internal
+  non-commercial use only. Commercial use is only allowed with a commercial
+  license
+
+- <https://n8n.io/pricing>
 
 ## The OpenAI Platform - Chatbots, Assistants, Agents, Agent Builder, Agent Kit and More
 
