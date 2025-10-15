@@ -297,7 +297,7 @@ output node
 
 - SSO\LDAP\Log Streaming: More relevant for large businesses\agencies
 
-## n8n Basics
+## n8n - Other Topics
 
 ### Keeping Things Organized
 
@@ -309,7 +309,7 @@ output node
 - The "define using AI" option is useful, when the information that needs to be
   passed between nodes is dynamic and not known in advance
 
-### Tool Calling
+### n8n Tool Calling
 
 - Code tools - these can be used, for example, to remove annotations from a PDF
   response, and so on
