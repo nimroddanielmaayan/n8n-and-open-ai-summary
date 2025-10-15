@@ -299,6 +299,12 @@ output node
 
 ## n8n - Other Topics
 
+### Retainer Clients
+
+- All n8n clients need to have at least a minimal "retainer" contract, since
+  they need to use a server that needs to be paid for, maintained and updated
+  periodically
+
 ### Keeping Things Organized
 
 - In order to keep things organized, it might be a good idea to name projects
