@@ -340,10 +340,19 @@ output node
   non-commercial use only. Commercial use is only allowed with a commercial
   license
 
+- In any case, at some point I'll want to do an advanced paid plan, for the
+  premium features
+
 - <https://n8n.io/pricing>
 
 ## The OpenAI Platform - Chatbots, Assistants, Agents, Agent Builder, Agent Kit and More
 
 - (complete this)
+
+- ...
+
+## OpenAI Cookbook
+
+### General Information - OpenAI Cookbook
 
 - ...
