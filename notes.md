@@ -351,12 +351,16 @@ output node
 
 ### License - n8n Self Hosting
 
-- The n8n "free self hosting license" allows for personal, hobby, or internal
-  non-commercial use only. Commercial use is only allowed with a commercial
+- The n8n free self hosting license allows for "personal, hobby, or internal
+  non-commercial" use only. Commercial use is only allowed with a commercial
   license
 
 - In any case, at some point I'll want to do an advanced paid plan, for the
   premium features
+
+- If a client wants to manage his own n8n account for his own internal uses, I
+  recommend self hosting. If it's for providing services to his clients, I
+  recommend using the n8n cloud, either independently or as part of my n8n cloud
 
 - <https://n8n.io/pricing>
 
