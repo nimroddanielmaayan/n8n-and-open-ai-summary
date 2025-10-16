@@ -64,7 +64,7 @@
 
 (I need to do projects that end up in impressive demos)
 
-### My Progress - Tutorials
+### My Progress - To Do
 
 To do - tutorials\videos:
 
@@ -78,6 +78,15 @@ To do - tutorials\videos:
 - <https://www.youtube.com/watch?v=PT6payqqvuk>
 - <https://www.youtube.com/watch?v=fWtXJswvUcA>
 - <https://www.youtube.com/watch?v=pMIiZfqfbCo>
+
+To do - flows to go over:
+
+- <https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/>
+- <https://n8n.io/workflows/2845-complete-business-whatsapp-ai-powered-rag-chatbot-using-openai/>
+- <https://n8n.io/workflows/6771-whatsapp-rag-chatbot-with-supabase-gemini-25-flash-and-openai-embeddings/>
+- <https://n8n.io/workflows/2845-complete-business-whatsapp-ai-powered-rag-chatbot-using-openai/>
+- <https://n8n.io/workflows/9043-whatsapp-support-bot-with-google-drive-rag-gpt-41-mini-and-cohere-reranking/>
+- <https://n8n.io/workflows/4827-ai-powered-whatsapp-chatbot-for-text-voice-images-and-pdf-with-rag/>
 
 ## Official n8n Tutorials - Summary
 
