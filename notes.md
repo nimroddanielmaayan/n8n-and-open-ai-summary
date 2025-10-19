@@ -366,13 +366,19 @@ output node
 
 ## The OpenAI Platform - Chatbots, Assistants, Agents, Agent Builder, Agent Kit and More
 
-- (complete this)
+- `Assistants` are like "augmented chats", that have been modified with custom
+  instructions, data, tools and so on
 
 - ...
 
 - ...
 
-## OpenAI Cookbook
+## Prompt Engineering and the OpenAI Cookbook
+
+### Prompt Engineering
+
+- I saved in this project, undert the "info" folder, a few resources for prompt
+  engineering, including a markdown guide
 
 ### General Information - OpenAI Cookbook
 
