@@ -375,10 +375,29 @@ output node
 
 ## Prompt Engineering and the OpenAI Cookbook
 
-### Prompt Engineering
+### Prompt Engineering Basics
 
 - I saved in this project, undert the "info" folder, a few resources for prompt
   engineering, including a markdown guide
+
+- {{variable}} can be used to define variables in a prompt. The variables also
+  need to be defined in the
+
+### Evals
+
+- Evals allow us to compare replies created by AI to replies created by human
+  moderators, and by that, to measure the reliability of the AI
+
+- Evals are needed when the output needs to be "correct, consistand and
+  trustworthy", and when data can be evaluated and compared to human analyed
+  data
+
+- In cases when the data can't be objectively evaluated (like comparing
+  true\false, positive\negative, etc.), evals can't be used and instead, we need
+  to sample the AI's results and to assess them manually
+
+- (I need to watch more YouTube tutorials about doing evals in the OpenAI
+  Platform, and get more into this later)
 
 ### General Information - OpenAI Cookbook
 
