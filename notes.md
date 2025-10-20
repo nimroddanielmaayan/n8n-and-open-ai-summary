@@ -404,6 +404,8 @@ output node
 - (I need to watch more YouTube tutorials about doing evals in the OpenAI
   Platform, and get more into this later)
 
+- n8n have a native evaluations\evals feature, inside the editor
+
 ### General Information - OpenAI Cookbook
 
 - (Includes instructions for specific use cases. Complete this later)
