@@ -366,12 +366,11 @@ output node
 
 ## The OpenAI Platform - Chatbots, Assistants, Agents, Agent Builder, Agent Kit and More
 
-- `Assistants` are like "augmented chats", that have been modified with custom
+- "Assistants" are like "augmented chats", that have been modified with custom
   instructions, data, tools and so on
 
-- ...
-
-- ...
+- Note: External APIs, like the OpenAI API, "think" of n8n like any other web
+  app that's connected to them
 
 ## Prompt Engineering and the OpenAI Cookbook
 
@@ -382,6 +381,12 @@ output node
 
 - {{variable}} can be used to define variables in a prompt. The variables also
   need to be defined in the
+
+- Practical prompt engineering tips from Nick Saraev:
+  - Keep prompts as short as possible
+  - Use the "playground" interfaces, not the "commercial" (public) interfaces.
+    This is true for all AI models, not just OpenAI\ChatGPT
+  - At the moment, OpenAI have the best conversation models
 
 ### Evals
 
