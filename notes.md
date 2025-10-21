@@ -388,6 +388,14 @@ output node
     This is true for all AI models, not just OpenAI\ChatGPT
   - At the moment, OpenAI have the best conversation models
 
+### Prompt Markdown
+
+- ...
+
+### The "Power Prompt" Template
+
+- ...
+
 ### Evals
 
 - Evals allow us to compare replies created by AI to replies created by human
