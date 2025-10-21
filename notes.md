@@ -345,7 +345,35 @@ output node
 
 ### General Information - WhatsApp Chatbots
 
-- (complete this)
+- "WhatsApp Business Coexistence" - A way supported by Meta to combine a
+  business WhatsApp number with an API. It's currently in beta mode, and
+  available only in a few countries (including the US). Might be relevant for
+  Upwork clients
+
+- The "Evolution API" is a pirated way of bypassing Meta and combining a
+  business WhatsApp account with an API. Could lead to the number being blocked.
+  Don't use for clients
+
+- For now, the best way to use WhatsApp is with Twilio, and to rent a new number
+
+- An Israeli WA number on Twilio costs about $15 a month, and usage costs about
+  $5 for every 1,000 messages sent
+
+- Meta allows the API to "initiate" messages only in very specific templates
+  (marketing, utility, authentication). Sending "freeform" messages is only
+  possible if the user sent us a message first (and then we have a 24-hour
+  window to send an API response). Meta are doing this in order to prevent
+  WhatsApp from becoming a spam app, and that makes sense
+
+- I prefer to create a Twilio account for every client. In the future, maybe I
+  will use Twilio's "agency" account feature. I have to apply for it in their
+  dashboard
+
+- In addition, the client will have to pay for OpenAI API credits
+
+- ManyChat is a simple, no-code platform for combining messages from WhatsApp
+  and all the other social networks into a single dashboard, using basic
+  automation for pre-written lead qualification questions, and so on
 
 ## n8n Self Hosting (on Hostinger)
 
@@ -386,6 +414,13 @@ output node
   - Keep prompts as short as possible
   - Use the "playground" interfaces, not the "commercial" (public) interfaces.
     This is true for all AI models, not just OpenAI\ChatGPT
+  - The "commercial" interfaces include system prompts that are aimed at
+    convincing users to get a premium license. This isn't always aligned with
+    the goals of a specfic business (for example - ChatGPT might offer the
+    client to check out other service providers). That's a good argument for
+    using the paid API, which can be controlled. It's like with social
+    networks - if you're using them for free, you're actually working for them.
+    Once you're paying them, they're working for you
   - At the moment, OpenAI have the best conversation models
 
 ### Prompt Markdown
