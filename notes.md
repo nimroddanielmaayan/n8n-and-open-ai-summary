@@ -429,7 +429,19 @@ output node
 
 ### The "Power Prompt" Template
 
-- ...
+- Role: Who the model should act as
+- Task: What needs to be done
+- Tone: Formal\friendly\technical, etc
+- Format: Plain text\JSON\markdown, etc
+- Constraints: Length, number of items, etc
+- Output: style, structure etc
+- Tools: Functions, external tools, etc, when and how to use them
+- Examples (optional): Several pairs of possible inputs and expected outputs
+- Edge cases (optional): How to behave when information is missing, questions
+  are unclear, etc
+
+- It's recommended to write the prompt as markdown, and possibly add YAML/JSON
+  metadata for better machine readability (in relevant cases)
 
 ### Evals
 
@@ -454,3 +466,33 @@ output node
 - (Includes instructions for specific use cases. Complete this later)
 
 - ...
+
+## RAG
+
+### RAG Options
+
+- There are basically 3 options for RAG in n8n:
+
+  - n8n’s native “Simple Vector Store” node. Use case - prototyping
+  - OpenAI Assistant “File Search” tool. Use case - basic production-grade RAG
+  - Third-party vector store (like Supabase). Use case - production-grade RAG
+    with specific requirements
+
+- Main advantages of third-party RAG over OpenAI File Search: Strict control of
+  chunking/embeddings, image/structured-file indexing, very large numbers of
+  small files, guaranteed full exportability for audits/migration, SQL
+  querying\tooling
+
+- OpenAI File Search has a hard limitation of a maximum of either:
+
+  - 10,000 total files
+  - 10GB total files size
+  - 512MB per file
+  - 10 million tokens per file
+
+- OpenAI File Search is definately enough for the needs of small businesses.
+  Another advantage is that it doesn't require a seperate paid account. It's
+  usage is billed through OpenAI credit, like the API
+
+- Using simple PDFs with FAQs is a good and efficient "common practice" for many
+  businesses that need RAG
