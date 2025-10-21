@@ -425,23 +425,42 @@ output node
 
 ### Prompt Markdown
 
-- ...
+- ## Symbols
+
+  - `#` - Heading 1 (only one per file)
+  - `##` \ `###` \ `####` - Heading 2, 3, 4, etc
+  - `-` \ `*` - Bullet list
+  - `1.` - Numbered list
+  - `**bold**` - Strong emphasis
+  - `_italic_` - Soft emphasis
+  - `>` - Quote block
+  - ` `code` ` - Inline code
+  - ` ``` ` - Start\end code block (the language name needs to be added)
+  - `[link text](link url)` - Link
+  - ` - Table column
+  - `---` - Horizontal rule
+  - `<>` - HTML
+  - `{{}}` - Variable
 
 ### The "Power Prompt" Template
 
+- Main Headline: Relevant and concise
 - Role: Who the model should act as
 - Task: What needs to be done
 - Tone: Formal\friendly\technical, etc
 - Format: Plain text\JSON\markdown, etc
 - Constraints: Length, number of items, etc
-- Output: style, structure etc
-- Tools: Functions, external tools, etc, when and how to use them
+- Output: style, structure, etc
+- Tools and Functions (optional): Functions, external tools, etc. When and how
+  to use them
 - Examples (optional): Several pairs of possible inputs and expected outputs
-- Edge cases (optional): How to behave when information is missing, questions
+- Edge Cases (optional): How to behave when information is missing, questions
   are unclear, etc
+- Variables (optional): Variables need to be defined before they are inserted
 
-- It's recommended to write the prompt as markdown, and possibly add YAML/JSON
-  metadata for better machine readability (in relevant cases)
+- It's recommended to write the prompt as markdown, for both human readability
+  and AI readability. It's possible to add a YAML/JSON metadata section to the
+  markdown, for better machine readability (in relevant cases)
 
 ### Evals
 
@@ -483,16 +502,17 @@ output node
   small files, guaranteed full exportability for audits/migration, SQL
   querying\tooling
 
-- OpenAI File Search has a hard limitation of a maximum of either:
+- OpenAI File Search has a hard limitation, of a maximum of either:
 
   - 10,000 total files
   - 10GB total files size
   - 512MB per file
   - 10 million tokens per file
+  - Can return up to 50 matches\results at a time
 
-- OpenAI File Search is definately enough for the needs of small businesses.
-  Another advantage is that it doesn't require a seperate paid account. It's
-  usage is billed through OpenAI credit, like the API
+- OpenAI File Search is definately enough for the needs of most small
+  businesses. Another advantage is that it doesn't require a seperate paid
+  account. It's usage is billed through OpenAI credit, like the API
 
 - Using simple PDFs with FAQs is a good and efficient "common practice" for many
   businesses that need RAG
