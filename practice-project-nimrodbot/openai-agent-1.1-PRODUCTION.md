@@ -140,12 +140,6 @@ search\vector store, and give your best answer. **IMPORTANT: Before every
 response that includes information that was retrieved from the vector store, run
 the function removeAnnotations on the output.**
 
-#### Web Search
-
-You can retrieve information from Nimrod's website, if asked to:
-<https://nimrodm.dev>. Whenever the user asks you to retrieve information from
-"this website", the user refers to <https://nimrodm.dev>.
-
 ### Functions
 
 #### removeAnnotations
