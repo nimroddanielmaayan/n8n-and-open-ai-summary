@@ -519,7 +519,20 @@ output node
 
 ### How RAG Works
 
-- ...
+- The vectorization pocess: Document -> chunk -> embed -> vectirize
+
+- The vector query process: Query -> chatbot -> embed -> go to existing vector
+  storage -> find relevent embeddings in the storage -> convert to content ->
+  compare to query -> response
+
+- The n8n nodes needed vectorize:
+
+  - Data Loader (to split document to chunks)
+  - Embeddings (to embed)
+  - Vector Store (to vectirize)
+
+- The n8n nodes needed do a vector query:
+  - (complete this)
 
 ### RAG Pipelines with Supabase
 
