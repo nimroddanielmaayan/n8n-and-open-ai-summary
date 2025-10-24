@@ -517,8 +517,10 @@ output node
 - Using simple PDFs with FAQs is a good and efficient "common practice" for many
   businesses that need RAG
 
-- ...
+### How RAG Works
 
 - ...
+
+### RAG Pipelines with Supabase
 
 - ...
