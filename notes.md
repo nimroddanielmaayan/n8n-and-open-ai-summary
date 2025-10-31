@@ -375,6 +375,10 @@ output node
   and all the other social networks into a single dashboard, using basic
   automation for pre-written lead qualification questions, and so on
 
+### The Twilio Platform
+
+- ...
+
 ## n8n Self Hosting (on Hostinger)
 
 ### License - n8n Self Hosting
@@ -535,6 +539,8 @@ output node
   - (complete this)
 
 ### RAG Pipelines with Supabase
+
+- ...
 
 - ...
 
