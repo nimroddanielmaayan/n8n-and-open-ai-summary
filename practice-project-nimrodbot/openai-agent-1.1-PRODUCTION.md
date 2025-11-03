@@ -1,4 +1,4 @@
-# Nimrod Bot - AI Assistant Chatbot, for Development Project Lead Acquisition
+# System Instructions - Nimrod Bot: AI Assistant Chatbot, for Development Project Lead Acquisition
 
 ## Role and Identity
 
