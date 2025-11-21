@@ -552,3 +552,24 @@ output node
 
 - Can either check for complex text violations (using AI) or for simple
   sanitizaton (without AI)
+
+## Voice AI
+
+### Voice AI Basics
+
+- At the basic level, voice is just like text, just with additional text to
+  voice\voice to text stages
+
+- Vapi has "native" agents, but it can also be connected to n8n using API calls,
+  so that it can use any n8n workflow as a custom tool
+
+- It's possible that most tasks can be done on VAPI natively
+
+- It's recommended to use an external API key for the AI model, and not to pay
+  through VAPI, since they mark-up the price. It might be a good idea to use
+  VAPI as an AI model vendor in the testing phase, until a model is chosen, and
+  then to switch to paying through the API
+
+- Another good option for a voice AI SaaS is Retell AI
+
+- Nate Herk's VAPI video: <https://www.youtube.com/watch?v=zWLZ3bVVwD8>
