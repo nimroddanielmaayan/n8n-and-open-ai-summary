@@ -377,7 +377,7 @@ output node
 
 ### The Twilio Platform
 
-- ...
+- (complete this)
 
 ## n8n Self Hosting (on Hostinger)
 
@@ -488,7 +488,7 @@ output node
 
 - (Includes instructions for specific use cases. Complete this later)
 
-- ...
+- (complete this)
 
 ## RAG
 
@@ -540,14 +540,15 @@ output node
 
 ### RAG Pipelines with Supabase
 
-- ...
+- Rag pipelines can range from very simple (like the client manually
+  uploading\removing\editing PDFs every few weeks or months), to having many
+  real-time triggers for vector DB updates, and complicated vector DB strategies
 
-- ...
+- (complete this)
 
-- ...
+## Guardrails
 
-- ...
+### The Guardrails n8n Nodes
 
-- ...
-
-- ...
+- Can either check for complex text violations (using AI) or for simple
+  sanitizaton (without AI)
