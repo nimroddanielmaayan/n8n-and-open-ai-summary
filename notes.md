@@ -429,22 +429,22 @@ output node
 
 ### Prompt Markdown
 
-- ## Symbols
+Symbols:
 
-  - `#` - Heading 1 (only one per file)
-  - `##` \ `###` \ `####` - Heading 2, 3, 4, etc
-  - `-` \ `*` - Bullet list
-  - `1.` - Numbered list
-  - `**bold**` - Strong emphasis
-  - `_italic_` - Soft emphasis
-  - `>` - Quote block
-  - ` `code` ` - Inline code
-  - ` ``` ` - Start\end code block (the language name needs to be added)
-  - `[link text](link url)` - Link
-  - ` - Table column
-  - `---` - Horizontal rule
-  - `<>` - HTML
-  - `{{}}` - Variable
+- `#` - Heading 1 (only one per file)
+- `##` \ `###` \ `####` - Heading 2, 3, 4, etc
+- `-` \ `*` - Bullet list
+- `1.` - Numbered list
+- `**bold**` - Strong emphasis
+- `_italic_` - Soft emphasis
+- `>` - Quote block
+- ` `code` ` - Inline code
+- ` ``` ` - Start\end code block (the language name needs to be added)
+- `[link text](link url)` - Link
+- ` - Table column
+- `---` - Horizontal rule
+- `<>` - HTML
+- `{{}}` - Variable
 
 ### The "Power Prompt" Template
 
