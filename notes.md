@@ -546,6 +546,12 @@ Symbols:
 
 - (complete this)
 
+### Gemini File Search
+
+- As of 11/2025, Google also has a built-in RAG, like OpenAI's. The files are
+  stored on Google Cloud. More information in Nate Herk's video:
+  <https://www.youtube.com/watch?v=irg-2IfAjpo>
+
 ## Guardrails
 
 ### The Guardrails n8n Nodes
