@@ -18,10 +18,13 @@
   instructions
 
 - n8n recently added a "Data Table" node, which is like Google Sheets, but
-  native
+  native. It's the easiest and fastest way to add "long term memory" to a
+  workflow, or to be shared by several workflows
 
-- The next thing that I have to do for "Nimrod Bot" is to write a PDF with
-  questions and answers, to upload to the OpenAI Platform
+- Working with data: It's a good idea to save our data at **several points**
+  along a workflow, and not just at the end. This way, data doesn't get lost in
+  case of an error or if something unexpected happens, and it's good for
+  debugging
 
 - n8n might be a "gold rush" for a while. So it's something that can make a lof
   of money in the short term, but will become very common and "comoditized" in
@@ -136,11 +139,12 @@ To do - flows to go over:
   - HTTP Request
   - Webhook
   - Respond to Webhook
-  - Edit Fields
+  - MCP Server - Trigger\Tool
+  - Edit Fields (set)
   - If
   - Switch
   - Loop
-  - Execute Sub-Workflow
+  - Sub-Workflow
   - Call n8n Workflow Tool
   - n8n
   - Code
@@ -150,6 +154,7 @@ To do - flows to go over:
   - Summarize
   - Stop and Error
   - Wait
+  - Output Parser
   - Data Table
   - Execution Data
   - No Operation
@@ -211,6 +216,22 @@ To do - flows to go over:
   tool for making HTTP requests manually. Many times, an APIs documentation will
   provide the curl version of commands, and that can save us time
 
+- All of the "action in app" nodes, in which n8n communicates with 3rd party
+  apps, are in fact HTTP Request Nodes\Webhook Nodes that have been modified and
+  packaged for these specific apps. In fact, the HTTP Request Node and the
+  "action in app" nodes are the only way for the workflow to make outbound
+  communications with the world which is outside of the n8n environment (and for
+  incoming communication, we have the Webhook Node)
+
+- If an external system that we're working with doesn't have a native n8n
+  integration, it's no problem - we just need to use the HTTP Request
+  Node\Webhook Node, and search for the external system's API documentation in
+  order to set them up
+
+- The Respond To Webhook Node is an "extension" of the Webhook Node - it sends
+  back information to the API that called the original webhook, after preforming
+  the actions that were needed
+
 - In a code node, it's possible to do a console.log and then to use the browser
   console to see the output
 
@@ -242,7 +263,8 @@ To do - flows to go over:
 - It's good practice to end every workflow with a No Operation node, and to call
   it "End of flow"
 
-- Sticky notes can be used to document a workflow
+- Sticky notes can be used to document a workflow. It's good practice to have an
+  "instructions and notes" sticky note, in every workflow that we build
 
 - The idea of a "workflow owner": This refers not to authority, but to tagging
   the person who is responsible for the workflow (either on of our team members
@@ -324,10 +346,19 @@ output node
 - The "define using AI" option is useful, when the information that needs to be
   passed between nodes is dynamic and not known in advance
 
-### n8n Tool Calling
+### n8n Agents and Tool Calling
 
 - Code tools - these can be used, for example, to remove annotations from a PDF
   response, and so on
+
+- One of the most powerfull things that we can do with AI agents and tool calls,
+  is giving the agent control over certain parameters in the tools that are
+  connected to it. For example: Letting the AI agent decide what the "to" field
+  in an email should be
+
+- The Output Parser Node: This node is mandatory when an agent has the "Require
+  Specific Output Format" set to "true". It forces the agent to reply in a
+  specific structure\format
 
 ### Assistants
 
