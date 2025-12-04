@@ -590,6 +590,16 @@ Symbols:
 - Can either check for complex text violations (using AI) or for simple
   sanitizaton (without AI)
 
+## MCP Servers on n8n
+
+- The option to use MCP servers was added in 12/2025. It allows some interesting
+  use cases such as:
+
+  - Calling an n8n workflow from ChatGPT or from Claude
+  - Calling an n8n workflow from a Claude Code inside Cursor, and turning the
+    workflow into a standalone web application
+  - And so on
+
 ## Voice AI
 
 ### Voice AI Basics
