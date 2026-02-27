@@ -4,8 +4,18 @@
 
 ### General Information - Automations and n8n
 
-- I am currently working on this tutorial: <https://youtu.be/u7ktVHkd8DI>, I
-  already set up payments to OpenAI
+- There are currently 3 major iPaaSes (Integration Platforms as a Service):
+  Zapier, Make.com and n8n
+
+- One of the key differences between n8n and the other two (Zapier and Make.com)
+  is that n8n is that it's "code friendly" while the others are "no code". It
+  supports code and aims more for developers than for general users. It supports
+  custom JavaScript and Python inside nodes, importimg npm packages, and
+  executing complex HTTP requests
+
+- n8n is fundamentally an intergration\automation tool, which is trying to
+  "accommodate" AI. It's not AI-centered. Although it's advancing in the
+  direction of including more and more AI features
 
 - I want to create one "Nimrod Bot" workflow that will use WhatsApp, and one
   that will use a "public" web chat window, so that potential clients can
@@ -53,6 +63,9 @@
   in a good way, and then repeat the process in a wahy that's as automatic as
   possible. Eventually, it's possible to even develop a software (SASS) that can
   solve this problem
+
+- I need to understand better how LangChain works (e.g., Agents vs. Chains vs.
+  Retrievers)
 
 ### My Progress - Types of Projects that I've Done
 
@@ -129,7 +142,6 @@ To do - flows to go over:
   external software
 
 - The most common\useful nodes:
-
   - Chat Trigger
   - n8n Form Trigger
   - Manual Trigger
@@ -164,7 +176,6 @@ To do - flows to go over:
 - Mapping: The first step to any good automation! Mapping can be done with any
   graphic software, or even on paper. There's no need to plan which nodes to use
   at this point, just the general logical flow of the process. Maping
-
   1. Fully understanding the task
   2. Tools that will be used
   3. Feasibility\reliability of the automation
@@ -526,7 +537,6 @@ Symbols:
 ### RAG Options
 
 - There are basically 3 options for RAG in n8n:
-
   - n8n’s native “Simple Vector Store” node. Use case - prototyping
   - OpenAI Assistant “File Search” tool. Use case - basic production-grade RAG
   - Third-party vector store (like Supabase). Use case - production-grade RAG
@@ -538,7 +548,6 @@ Symbols:
   querying\tooling
 
 - OpenAI File Search has a hard limitation, of a maximum of either:
-
   - 10,000 total files
   - 10GB total files size
   - 512MB per file
@@ -561,7 +570,6 @@ Symbols:
   compare to query -> response
 
 - The n8n nodes needed vectorize:
-
   - Data Loader (to split document to chunks)
   - Embeddings (to embed)
   - Vector Store (to vectirize)
@@ -594,7 +602,6 @@ Symbols:
 
 - The option to use MCP servers was added in 12/2025. It allows some interesting
   use cases such as:
-
   - Calling an n8n workflow from ChatGPT or from Claude
   - Calling an n8n workflow from a Claude Code inside Cursor, and turning the
     workflow into a standalone web application
